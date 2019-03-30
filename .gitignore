@@ -1,6 +1,6 @@
 ### Custom ###
 /lib
-uni-bento.txt
+uni-bento.*
 
 # Created by https://www.gitignore.io/api/node,macos,linux,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,macos,linux,visualstudiocode

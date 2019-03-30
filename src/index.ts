@@ -1,11 +1,9 @@
-'use strict';
-
 import * as fs from 'fs';
 import ascii from './ascii';
 import korean from './korean';
 
-export default function execute(): number {
-  fs.open('./uni-bento.txt', 'w', (error, fd) => {
+export function executeKorean(): number {
+  fs.open('./uni-bento.korean.txt', 'w', (error, fd) => {
     if (error) {
       throw error;
     }
@@ -17,6 +15,18 @@ export default function execute(): number {
       }
     });
 
+    fs.close(fd, () => console.log(`\n🍱 Bento is here! - korean\n`));
+  });
+
+  return 0;
+}
+
+export function executeAscii(): number {
+  fs.open('./uni-bento.ascii.txt', 'w', (error, fd) => {
+    if (error) {
+      throw error;
+    }
+
     const asciiBuf = Buffer.from(ascii(), 'utf-8');
     fs.write(fd, asciiBuf, 0, asciiBuf.length, null, err => {
       if (err) {
@@ -24,8 +34,23 @@ export default function execute(): number {
       }
     });
 
-    fs.close(fd, () => console.log(`\nAll process is done.\n`));
+    fs.close(fd, () => console.log(`\n🍱 Bento is here! - ascii\n`));
   });
 
+  return 0;
+}
+
+export function printHelp(): number {
+  const helpText = `
+  [uni-bento] 🍱 A universal unicode table printer
+
+  Usage: uni-bento [OPTIONS]
+
+  Options:
+    --korean    Output all Korean characters from a unicode table
+    --ascii     Output all ASCII characters
+  `;
+
+  console.log(helpText);
   return 0;
 }
