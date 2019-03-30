@@ -18,6 +18,10 @@
       "{src,bin}/**/*.{js,ts}": [
         "yarn prettier",
         "git add"
+      ],
+      "*.{md,json,yml}": [
+        "yarn prettier",
+        "git add"
       ]
     },
     "ignore": [
