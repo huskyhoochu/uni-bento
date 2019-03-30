@@ -1,11 +1,11 @@
 {
   "name": "uni-bento",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A universal unicode table printer",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "repository": "https://github.com/huskyhoochu/uni-bento.git",
-  "author": "huskyhoochu",
+  "author": "huskyhoochu <dfg1499@gmail.com>",
   "license": "MIT",
   "keywords": [
     "unicode"
