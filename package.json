@@ -1,17 +1,17 @@
 {
   "name": "uni-bento",
-  "version": "0.0.2",
-  "description": "Universal Unicode Table Printer",
+  "version": "0.0.3",
+  "description": "A universal unicode table printer",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "repository": "https://github.com/huskyhoochu/uni-bento.git",
-  "author": "huskyhoochu",
+  "author": "huskyhoochu <dfg1499@gmail.com>",
   "license": "MIT",
   "keywords": [
     "unicode"
   ],
   "scripts": {
-    "start": "node ./src/index.js",
+    "start": "./bin/uni-bento.js",
     "prettier": "prettier --write",
     "tslint": "tslint -p tsconfig.json",
     "build": "tsc",
@@ -26,18 +26,19 @@
   },
   "lint-staged": {
     "linters": {
-      "{src,bin}/**/*.{js,ts}": [
+      "src/**/*.ts": [
         "yarn prettier",
         "yarn tslint",
         "git add"
       ],
-      "*.{md,json,yml}": [
+      "*.{md,json,yml,js}": [
         "yarn prettier",
         "git add"
       ]
     },
     "ignore": [
-      "./node_modules/**/*"
+      "./node_modules/**/*",
+      "./lib"
     ]
   },
   "husky": {

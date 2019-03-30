@@ -4,4 +4,4 @@
 
 const cli = require('../lib/index');
 
-process.exitCode = cli.execute();
+process.exitCode = cli.default();
