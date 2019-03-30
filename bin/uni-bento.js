@@ -12,5 +12,5 @@ if (korean) {
 } else if (ascii) {
   process.exitCode = bento.executeAscii();
 } else {
-  process.exitCode = bento.executeAll();
+  process.exitCode = bento.printHelp();
 }

@@ -42,28 +42,17 @@ export function executeAscii(): number {
   return 0;
 }
 
-export function executeAll(): number {
-  fs.open('./uni-bento.all.txt', 'w', (error, fd) => {
-    if (error) {
-      throw error;
-    }
+export function printHelp(): number {
+  const helpText = `
+  [uni-bento] 🍱 A universal unicode table printer
 
-    const koreanBuf = Buffer.from(korean(), 'utf-8');
-    fs.write(fd, koreanBuf, 0, koreanBuf.length, null, err => {
-      if (err) {
-        throw err;
-      }
-    });
+  Usage: uni-bento [OPTIONS]
 
-    const asciiBuf = Buffer.from(ascii(), 'utf-8');
-    fs.write(fd, asciiBuf, 0, asciiBuf.length, null, err => {
-      if (err) {
-        throw err;
-      }
-    });
+  Options:
+    --korean    Output all Korean characters from a Unicode table
+    --ascii     Output all ASCII characters
+  `;
 
-    fs.close(fd, () => console.log(`\nAll process is done.\n`));
-  });
-
+  console.log(helpText);
   return 0;
 }
