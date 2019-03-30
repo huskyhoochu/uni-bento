@@ -2,14 +2,56 @@
   "name": "uni-bento",
   "version": "0.0.2",
   "description": "Universal Unicode Table Printer",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "repository": "https://github.com/huskyhoochu/uni-bento.git",
   "author": "huskyhoochu",
   "license": "MIT",
+  "keywords": [
+    "unicode"
+  ],
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "prettier": "prettier --write",
+    "tslint": "tslint -p tsconfig.json",
+    "build": "tsc",
+    "prepare": "npm run build"
   },
+  "files": [
+    "lib/**/*",
+    "bin/**/*"
+  ],
   "bin": {
     "uni-bento": "./bin/uni-bento.js"
+  },
+  "lint-staged": {
+    "linters": {
+      "{src,bin}/**/*.{js,ts}": [
+        "yarn prettier",
+        "yarn tslint",
+        "git add"
+      ],
+      "*.{md,json,yml}": [
+        "yarn prettier",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "./node_modules/**/*"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^11.12.2",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "1.16.4",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.1"
   }
 }

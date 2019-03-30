@@ -1,4 +1,4 @@
-# 🍱uni-bento
+# 🍱 uni-bento
 
 > A universal unicode table printer
 
@@ -13,6 +13,7 @@ yarn add uni-bento
 ```
 
 ## Usage
+
 ```
 node_modules/.bin/uni-bento
 ```
