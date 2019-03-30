@@ -9,10 +9,13 @@ uni-bento는 유니코드 테이블에서 지정된 언어의 철자 전체를 `
 uni-bento is a simple tool that prints the entire spelling of a specified language from a Unicode table to a `.txt` file. Currently, Korean and ASCII character output is supported.
 
 한국어: 유니코드 완성형 11,172자 (U+AC00 ~ U+D7A3) + 한글 자모 51자 (U+3131 ~ U+3163)
+
 (참고: [HANGUL IN UNICODE](http://www.programminginkorean.com/programming/hangul-in-unicode/))
+
 아스키: 아스키 테이블에서 제어문자와 공백문자를 제외한 모든 문자
 
 Korean: Unicode completion type 11,172 characters (U+AC00 ~ U+D7A3) + 51 Korean Jamo (Pure vowels and consonants) characters (U+3131 ~ U+3163)
+
 ASCII: All characters except the control and blank characters in the ASCII table
 
 ## Why do you need uni-bento?
