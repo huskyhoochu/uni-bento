@@ -17,7 +17,7 @@ export function executeKorean(): number {
       }
     });
 
-    fs.close(fd, () => console.log(`\nAll process is done.\n`));
+    fs.close(fd, () => console.log(`\n🍱 Bento is here! - korean\n`));
   });
 
   return 0;
@@ -36,7 +36,7 @@ export function executeAscii(): number {
       }
     });
 
-    fs.close(fd, () => console.log(`\nAll process is done.\n`));
+    fs.close(fd, () => console.log(`\n🍱 Bento is here! - ascii\n`));
   });
 
   return 0;
