@@ -4,8 +4,10 @@ import * as fs from 'fs';
 
 const cli = {
   execute() {
-    fs.open('./unicode.txt', 'w', (err, fd) => {
-      if (err) throw err;
+    fs.open('./unicode.txt', 'w', (error, fd) => {
+      if (error) {
+        throw error;
+      }
       // 완성형
       let completeCount = 0;
       for (let x = 172; x < 216; x++) {
@@ -24,9 +26,11 @@ const cli = {
           completeCount++;
           console.log(converted, completeCount);
 
-          let buf = new Buffer(converted);
-          fs.write(fd, buf, 0, buf.length, null, (err, written, buffer) => {
-            if (err) throw err;
+          const buf = new Buffer(converted);
+          fs.write(fd, buf, 0, buf.length, null, err => {
+            if (err) {
+              throw err;
+            }
           });
         }
       }
@@ -38,9 +42,11 @@ const cli = {
         converted = String.fromCharCode(parseInt(`0X31${y.toString(16)}`, 16));
         jamoCount++;
         console.log(converted, jamoCount);
-        let buf = new Buffer(converted);
-        fs.write(fd, buf, 0, buf.length, null, (err, written, buffer) => {
-          if (err) throw err;
+        const buf = new Buffer(converted);
+        fs.write(fd, buf, 0, buf.length, null, err => {
+          if (err) {
+            throw err;
+          }
         });
       }
 
@@ -51,9 +57,11 @@ const cli = {
         converted = String.fromCharCode(a);
         asciiCount++;
         console.log(converted, asciiCount);
-        let buf = new Buffer(converted);
-        fs.write(fd, buf, 0, buf.length, null, (err, written, buffer) => {
-          if (err) throw err;
+        const buf = new Buffer(converted);
+        fs.write(fd, buf, 0, buf.length, null, err => {
+          if (err) {
+            throw err;
+          }
         });
       }
 
