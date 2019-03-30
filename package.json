@@ -1,6 +1,6 @@
 {
   "name": "uni-bento",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Universal Unicode Table Printer",
   "main": "./src/index.js",
   "repository": "https://github.com/huskyhoochu/uni-bento.git",

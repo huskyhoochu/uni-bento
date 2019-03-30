@@ -13,6 +13,9 @@ yarn add uni-bento
 ```
 
 ## Usage
+```
+node_modules/.bin/uni-bento
+```
 
 ## Roadmap
 
