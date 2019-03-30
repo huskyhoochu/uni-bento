@@ -47,7 +47,7 @@ export function printHelp(): number {
   Usage: uni-bento [OPTIONS]
 
   Options:
-    --korean    Output all Korean characters from a Unicode table
+    --korean    Output all Korean characters from a unicode table
     --ascii     Output all ASCII characters
   `;
 
