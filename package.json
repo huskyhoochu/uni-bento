@@ -1,6 +1,6 @@
 {
   "name": "uni-bento",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A universal unicode table printer",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
