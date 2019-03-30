@@ -2,11 +2,14 @@
   "name": "uni-bento",
   "version": "0.0.1",
   "description": "Universal Unicode Table Printer",
-  "main": "index.js",
+  "main": "./src/index.js",
   "repository": "https://github.com/huskyhoochu/uni-bento.git",
   "author": "huskyhoochu",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./src/index.js"
+  },
+  "bin": {
+    "uni-bento": "./bin/uni-bento.js"
   }
 }
