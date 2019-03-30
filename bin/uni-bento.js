@@ -2,6 +2,6 @@
 
 'use strict';
 
-const cli = require('../src/index');
+const cli = require('../lib/index');
 
 process.exitCode = cli.execute();
