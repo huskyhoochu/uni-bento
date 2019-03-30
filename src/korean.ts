@@ -1,5 +1,3 @@
-'use_strict';
-
 export default function korean(): string {
   let result = '';
 
