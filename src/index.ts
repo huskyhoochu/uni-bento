@@ -39,18 +39,3 @@ export function executeAscii(): number {
 
   return 0;
 }
-
-export function printHelp(): number {
-  const helpText = `
-  [uni-bento] 🍱 A universal unicode table printer
-
-  Usage: uni-bento [OPTIONS]
-
-  Options:
-    --korean    Output all Korean characters from a unicode table
-    --ascii     Output all ASCII characters
-  `;
-
-  console.log(helpText);
-  return 0;
-}
