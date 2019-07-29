@@ -4,6 +4,7 @@
 
 const program = require('commander');
 const moduleInfo = require('../package.json');
+const bento = require('../lib/index');
 
 program
   .version(moduleInfo.version)
@@ -13,15 +14,10 @@ program
 
 program.parse(process.argv);
 
-// const bento = require('../lib/index');
+if (program.korean) {
+  process.exitCode = bento.executeKorean();
+}
 
-// const korean = process.argv.indexOf('--korean') > -1;
-// const ascii = process.argv.indexOf('--ascii') > -1;
-
-// if (korean) {
-//   process.exitCode = bento.executeKorean();
-// } else if (ascii) {
-//   process.exitCode = bento.executeAscii();
-// } else {
-//   process.exitCode = bento.printHelp();
-// }
+if (program.ascii) {
+  process.exitCode = bento.executeAscii();
+}
